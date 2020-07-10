@@ -266,7 +266,6 @@ unsigned int parseLayerProperty(std::string property) {
    * pooling_size = 14
    * pooling = 15
    * flatten = 16
-   * name = 17
    *
    * InputLayer has 0, 1, 2, 3 properties.
    * FullyConnectedLayer has 1, 4, 6, 7, 8, 9 properties.
@@ -274,12 +273,12 @@ unsigned int parseLayerProperty(std::string property) {
    * Pooling2DLayer has 12, 13, 14, 15 properties.
    * BatchNormalizationLayer has 0, 1, 5, 6, 7 properties.
    */
-  std::array<std::string, 19> property_string = {
+  std::array<std::string, 18> property_string = {
     "input_shape", "bias_init_zero", "normalization", "standardization",
     "activation",  "epsilon",        "weight_decay",  "weight_decay_lambda",
     "unit",        "weight_ini",     "filter",        "kernel_size",
     "stride",      "padding",        "pooling_size",  "pooling",
-    "flatten",     "name",           "unknown"};
+    "flatten",     "unknown"};
 
   for (i = 0; i < property_string.size(); i++) {
     unsigned int size = (property_string[i].size() > property.size())

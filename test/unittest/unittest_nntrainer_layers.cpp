@@ -260,13 +260,22 @@ TEST(nntrainer_FullyConnectedLayer_init_name, initialize_05_n) {
   nntrainer::TensorDim d;
   std::string layer_name;
 
-  /** no name is set */
+  /** Default name is set */
   layer_name = layer0.getName();
-  EXPECT_EQ(layer_name.length(), 0);
+  EXPECT_GT(layer_name.length(), 0);
 
-  /** Set empty name */
-  status = layer0.setName(std::string());
+  /** Set same name again */
+  status = layer0.setName(layer_name);
+  EXPECT_EQ(status, ML_ERROR_NONE);
+  EXPECT_EQ(layer0.getName(), layer_name);
+
+  /** Do not set the name already allocated */
+  status = layer1.setName(layer_name);
   EXPECT_EQ(status, ML_ERROR_INVALID_PARAMETER);
+
+  /** Default name is set even after error */
+  layer_name = layer1.getName();
+  EXPECT_GT(layer_name.length(), 0);
 }
 
 /**
