@@ -102,7 +102,7 @@ $ git pull # If you want to build with latest sources.
 
 You can try build from now on without concerning about Prerequisites.
 
-### How to Build
+### 🛸 How to Build 🛸
 
 Download the source file by cloning the github repository.
 
@@ -140,7 +140,7 @@ cd5c36e Add Coverage Test badge for nntrainer
 ...
 ```
 
-You can find the source code of the core library in nntrainer/src. In order to build them, use [meson](https://mesonbuild.com/)
+⭐ (여기부터 하면 됨) You can find the source code of the core library in nntrainer/src. In order to build them, use [meson](https://mesonbuild.com/) ⭐
 ```bash
 $ meson build
 The Meson build system

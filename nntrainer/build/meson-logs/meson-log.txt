@@ -1,0 +1,11 @@
+Build started at 2020-07-22T21:00:22.698100
+Main binary: c:\python38\python.exe
+Build Options: 
+Python system: Windows
+The Meson build system
+Version: 0.55.0
+Source dir: C:\Users\multicampus\Desktop\nntrainer\nntrainer
+Build dir: C:\Users\multicampus\Desktop\nntrainer\nntrainer\build
+Build type: native build
+
+ERROR: First statement must be a call to project
